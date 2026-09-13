@@ -1,0 +1,109 @@
+.cabecalho-pagina {
+  padding: 30px 0 60px;
+  border-bottom: 1px solid #dedbd3;
+}
+
+.cabecalho-pagina h1 {
+  margin: 16px 0;
+  color: #102a43;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+.cabecalho-pagina p:not(.etiqueta) {
+  max-width: 680px;
+  color: #52606d;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.etiqueta {
+  margin: 0;
+  color: #d9822b;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+}
+
+.lista-projetos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 60px 0;
+}
+
+.projeto {
+  min-height: 330px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dedbd3;
+}
+
+.projeto:hover {
+  border-color: #315c8c;
+}
+
+.numero {
+  color: #d9822b;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.projeto h2 {
+  margin: 30px 0 16px;
+  color: #102a43;
+  font-size: 1.6rem;
+}
+
+.projeto p {
+  color: #52606d;
+  line-height: 1.7;
+}
+
+.projeto .tecnologias {
+  margin-top: 24px;
+  color: #315c8c;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.links-projeto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.links-projeto a {
+  color: #315c8c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.links-projeto a:hover {
+  text-decoration: underline;
+}
+
+.projeto-futuro {
+  background: #f1eee8;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 6px 10px;
+  border: 1px solid #b8c2cc;
+  color: #52606d;
+  background: #f7f5f0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 760px) {
+  .lista-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto {
+    min-height: auto;
+  }
+}

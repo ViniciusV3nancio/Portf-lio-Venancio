@@ -1,0 +1,49 @@
+<section class="cabecalho-pagina">
+  <p class="etiqueta">PORTFÓLIO</p>
+
+  <h1>Projetos</h1>
+
+  <p>
+    Projetos acadêmicos e pessoais desenvolvidos para praticar backend,
+    APIs REST, banco de dados, regras de negócio e desenvolvimento web.
+  </p>
+</section>
+
+<section class="lista-projetos">
+  @for (projeto of projetos; track projeto.numero ) {
+    <article class="projeto">
+      <span class="numero">{{ projeto.numero }}</span>
+
+      <h2>{{ projeto.titulo }}</h2>
+
+      <p>{{ projeto.descricao }}</p>
+
+      <p class="tecnologias">
+        {{ projeto.tecnologias }}
+      </p>
+
+      @if (projeto.github) {
+        <div class="links-projeto">
+          <a
+            [href]="projeto.github"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub
+          </a>
+
+          @if (projeto.numero === '01') {
+            <a routerLink="/estudos">
+              Ver aprendizados
+            </a>
+          }
+        </div>
+      }
+
+      @if (!projeto.github) {
+        <span class="status">
+          {{ projeto.status }}
+        </span>
+      }
+    </article>
+  }
+</section>

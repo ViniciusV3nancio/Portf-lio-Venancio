@@ -1,0 +1,81 @@
+<section class="apresentacao">
+  <p class="etiqueta">JAVA · SPRING BOOT · APIs REST</p>
+
+  <h1>Vinicius Venâncio</h1>
+
+  <h2>Desenvolvedor Java Júnior com foco em backend.</h2>
+
+  <p>
+    Profissional de TI, formado em Sistemas para Internet, com experiência em
+    suporte técnico e projetos utilizando Java, Spring Boot, PostgreSQL e Git.
+  </p>
+
+  <div class="acoes">
+    <a routerLink="/projetos ">Ver projetos</a>
+    <a routerLink="/estudos ">Ver estudos</a>
+    <a
+       href="/curriculo-vinicius-venancio.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+  Ver currículo
+    </a>
+  </div>
+</section>
+
+<section class="sobre">
+  <p class="etiqueta">SOBRE MIM</p>
+
+  <h2>Da resolução de problemas ao desenvolvimento de sistemas.</h2>
+
+  <p>
+    Minha experiência em suporte de TI desenvolveu minha capacidade de investigar
+    problemas, entender usuários e buscar soluções. Atualmente, direciono essa
+    experiência para o desenvolvimento de aplicações web com Java e Spring Boot.
+  </p>
+
+  <p>
+    Também participei de um projeto de recondicionamento tecnológico na Fatec,
+    trabalhando com Linux, diagnóstico e recuperação de equipamentos.
+  </p>
+</section>
+
+<section class="tecnologias">
+  <p class="etiqueta">TECNOLOGIAS</p>
+
+  <h2>Ferramentas que utilizo ou estou estudando.</h2>
+
+  <div class="lista-tecnologias">
+    @for (tecnologia of tecnologias; track tecnologia ) {
+      <span>{{ tecnologia }}</span>
+    }
+  </div>
+</section>
+
+<section class="contato">
+  <p class="etiqueta">CONTATO PROFISSIONAL</p>
+
+  <h2>Estou aberto a oportunidades em desenvolvimento Java.</h2>
+
+  <p>
+    Para conhecer melhor meu trabalho, acesse meus projetos ou entre em contato
+    pelos canais abaixo.
+  </p>
+
+  <div class="links-contato">
+  @for (link of links; track link.nome ) {
+    @if (link.nome === 'E-mail') {
+      <a [href]="link.url">
+        {{ link.nome }}
+      </a>
+    } @else {
+      <a
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer">
+        {{ link.nome }}
+      </a>
+    }
+  }
+</div>
+
+</section>

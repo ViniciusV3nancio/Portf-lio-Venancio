@@ -1,0 +1,76 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #202124;
+  background: #f7f5f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.cabecalho {
+  padding: 24px 0;
+  border-bottom: 1px solid #dedbd3;
+  background: #f7f5f0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  color: #202124;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #315c8c;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.conteudo {
+  min-height: calc(100vh - 150px);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.rodape {
+  padding: 24px 0;
+  background: #102a43;
+  color: #ffffff;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}

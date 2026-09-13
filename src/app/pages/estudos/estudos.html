@@ -1,0 +1,42 @@
+<section class="cabecalho-pagina">
+  <p class="etiqueta">CADERNO DE ESTUDOS</p>
+
+  <h1>Aprendizados registrados durante a prática.</h1>
+
+  <p>
+    Um espaço para registrar decisões técnicas, dificuldades e aprendizados
+    durante a construção dos meus projetos.
+  </p>
+</section>
+
+<section class="lista-posts">
+  @for (post of posts; track post.titulo) {
+    <article
+      class="post"
+      [class.post-futuro]="!post.publicado">
+
+      <div class="informacoes-post">
+        <span class="data">{{ post.data }}</span>
+        <span class="categoria">{{ post.categoria }}</span>
+      </div>
+
+      <h2>{{ post.titulo }}</h2>
+
+      <p>{{ post.resumo }}</p>
+
+      <p class="tecnologias">
+        {{ post.tecnologias }}
+      </p>
+
+      @if (post.projeto) {
+        <a routerLink="/projetos">
+          Relacionar ao projeto To-Do
+        </a>
+      }
+
+      @if (!post.publicado) {
+        <span class="status">Em breve</span>
+      }
+    </article>
+  }
+</section>
