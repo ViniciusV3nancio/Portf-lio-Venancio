@@ -32,14 +32,22 @@
 }
 
 .projeto {
-  min-height: 330px;
+  min-height: 350px;
   padding: 30px;
-  background: #ffffff;
   border: 1px solid #dedbd3;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .projeto:hover {
-  border-color: #315c8c;
+  border-color: #9fb3c8;
+  box-shadow: 0 14px 32px rgba(16, 42, 67, 0.12);
+  transform: translateY(-4px);
 }
 
 .numero {
@@ -69,18 +77,27 @@
 .links-projeto {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  align-items: center;
+  gap: 12px;
   margin-top: 28px;
 }
 
 .links-projeto a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid #315c8c;
+  border-radius: 5px;
   color: #315c8c;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .links-projeto a:hover {
-  text-decoration: underline;
+  background: #315c8c;
+  color: #ffffff;
 }
 
 .projeto-futuro {
@@ -88,14 +105,18 @@
 }
 
 .status {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
   margin-top: 24px;
-  padding: 6px 10px;
+  padding: 0 10px;
   border: 1px solid #b8c2cc;
-  color: #52606d;
+  border-radius: 999px;
   background: #f7f5f0;
-  font-size: 0.8rem;
-  font-weight: bold;
+  color: #52606d;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 @media (max-width: 760px) {

@@ -34,14 +34,25 @@
 }
 
 .post {
-  padding: 32px;
-  background: #ffffff;
+  padding: 34px;
+  border: 1px solid #dedbd3;
   border-left: 4px solid #315c8c;
+  border-radius: 0 10px 10px 0;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post:hover {
+  box-shadow: 0 14px 30px rgba(16, 42, 67, 0.1);
+  transform: translateY(-3px);
 }
 
 .post-futuro {
-  background: #f1eee8;
   border-left-color: #b8c2cc;
+  background: #f1eee8;
 }
 
 .informacoes-post {
@@ -85,15 +96,21 @@
 }
 
 .post a {
-  display: inline-block;
-  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  margin-top: 24px;
+  padding: 0 14px;
+  border: 1px solid #315c8c;
+  border-radius: 5px;
   color: #315c8c;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .post a:hover {
-  text-decoration: underline;
+  background: #315c8c;
+  color: #ffffff;
 }
 
 .status {
