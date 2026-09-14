@@ -1,59 +1,169 @@
-# PortfolioVinicius
+# Portfólio — Vinicius Venâncio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0.
+Portfólio pessoal desenvolvido com Angular para apresentar minha trajetória profissional, projetos, tecnologias estudadas e materiais de contato.
 
-## Development server
+O projeto foi criado com foco em uma interface simples, responsiva e fácil de manter, direcionada a recrutadores e profissionais de tecnologia.
 
-To start a local development server, run:
+## Objetivos
+
+- Apresentar minha trajetória em suporte de TI e desenvolvimento de software.
+- Destacar projetos acadêmicos e pessoais.
+- Demonstrar conhecimentos em Java, Spring Boot, APIs REST, bancos de dados e Angular.
+- Disponibilizar meu currículo e links profissionais.
+- Registrar estudos e aprendizados técnicos.
+
+## Tecnologias
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Git e GitHub
+
+## Estrutura atual
+
+O site possui três áreas principais:
+
+| Rota | Descrição |
+|---|---|
+| `/` | Apresentação profissional, trajetória, tecnologias e contatos |
+| `/projetos` | Lista de projetos com descrição, tecnologias, status e links para o GitHub |
+| `/estudos` | Lista de estudos e aprendizados técnicos |
+
+O currículo está disponível como arquivo estático na pasta `public` e pode ser acessado pelo botão correspondente na página inicial.
+
+## Pré-requisitos
+
+Para executar o projeto localmente, é necessário ter instalado:
+
+- Node.js;
+- npm;
+- Angular CLI;
+- Git.
+
+As versões utilizadas durante o desenvolvimento podem ser consultadas com:
+
+```bash
+node --version
+npm --version
+ng version
+git --version
+```
+
+## Como executar localmente
+
+Clone o repositório e acesse a pasta do projeto:
+
+```bash
+git clone https://github.com/ViniciusV3nancio/portfolio-vinicius.git
+cd portfolio-vinicius
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o servidor de desenvolvimento:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois, abra no navegador:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+O Angular atualiza a aplicação automaticamente quando os arquivos são alterados.
 
-```bash
-ng generate --help
-```
+## Build de produção
 
-## Building
-
-To build the project run:
+Para gerar os arquivos otimizados para publicação, execute:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos de saída serão gerados dentro da pasta `dist`.
 
-## Running unit tests
+Antes de publicar, verifique se o build terminou sem erros e se a pasta gerada contém o arquivo `index.html`.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Conteúdo estático
 
-```bash
-ng test
+Arquivos que precisam ser acessados diretamente pelo navegador devem ficar na pasta `public`.
+
+Exemplo:
+
+```text
+public/
+└── curriculo-vinicius-venancio.pdf
 ```
 
-## Running end-to-end tests
+Após o build, o currículo deve estar disponível na raiz do site pelo endereço configurado no projeto.
 
-For end-to-end (e2e) testing, run:
+## Publicação
 
-```bash
-ng e2e
-```
+O projeto pode ser publicado em uma plataforma de hospedagem para sites estáticos conectada ao GitHub.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+O fluxo recomendado é:
 
-## Additional Resources
+1. enviar o projeto para um repositório público no GitHub;
+2. conectar o repositório a uma plataforma de hospedagem;
+3. configurar o comando de build como `ng build`;
+4. informar como diretório de publicação a pasta de saída gerada pelo Angular;
+5. configurar o fallback das rotas Angular para `index.html`;
+6. validar as rotas `/`, `/projetos` e `/estudos` após a publicação.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Projetos apresentados
+
+### API To-Do List
+
+API REST para gerenciamento de usuários e tarefas, com foco em autenticação, autorização, persistência e documentação.
+
+Tecnologias relacionadas:
+
+- Java;
+- Spring Boot;
+- PostgreSQL;
+- Spring Security;
+- JWT;
+- JPA.
+
+### Constructo
+
+Plataforma web para criação de plantas baixas e cálculo automatizado de materiais de construção.
+
+Tecnologias relacionadas:
+
+- PHP;
+- JavaScript;
+- MySQL;
+- Modelagem de dados.
+
+## Status do projeto
+
+O portfólio está em evolução. A versão atual prioriza uma apresentação simples e funcional, com conteúdo estático e navegação entre páginas.
+
+Possíveis próximos passos:
+
+- adicionar novos projetos;
+- publicar posts técnicos completos;
+- melhorar testes do frontend;
+- conectar o Angular a uma API Spring Boot;
+- adicionar demos online dos projetos;
+- automatizar build e deploy.
+
+## Autor
+
+**Vinicius Venâncio**
+
+- GitHub: [ViniciusV3nancio](https://github.com/ViniciusV3nancio)
+- LinkedIn: [vvenanciodev](https://linkedin.com/in/vvenanciodev)
+- E-mail: [viniciusvenancio143@outlook.com](mailto:viniciusvenancio143@outlook.com)
+
+## Licença
+
+Este projeto é um portfólio pessoal. O código pode ser consultado para fins de estudo, mas o conteúdo pessoal, currículo e identidade visual não devem ser reutilizados sem autorização.
